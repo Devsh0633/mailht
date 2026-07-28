@@ -203,6 +203,72 @@
   }
   .sig-link svg { flex-shrink: 0; }
 
+  /* CARD 5 / FEATURED 5TH PROPOSITION */
+  .card.c5 {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    padding: 26px 24px 22px;
+  }
+  .card.c5::before {
+    background: linear-gradient(90deg, #10b981, #06b6d4, #3b82f6);
+  }
+  .card.c5 .badge {
+    background: linear-gradient(135deg, #10b981, #059669);
+  }
+  .card.c5 .icon-box {
+    background: #dbeafe;
+  }
+  .card.c5 .icon-box svg {
+    stroke: var(--blue);
+  }
+  .card.c5 h3 {
+    font-size: 18px;
+    padding-right: 80px;
+    margin-bottom: 10px;
+    color: var(--navy);
+  }
+  .card.c5 p {
+    font-size: 14px;
+    min-height: auto;
+    margin-bottom: 20px;
+    color: #475569;
+    line-height: 1.6;
+  }
+  .card-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+  }
+  .author-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: #ffffff; font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: justify-content; justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(11,20,64,0.15);
+  }
+  .author-info {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 14px; color: var(--navy);
+    line-height: 1.2;
+  }
+  .author-info span {
+    display: block; font-family: 'Inter', sans-serif;
+    font-weight: 500; font-size: 12px; color: var(--muted); margin-top: 2px;
+  }
+
   @media (max-width: 480px) {
     .grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 27px; }
@@ -263,27 +329,44 @@
         <a class="cta" href="https://www.youtube.com/watch?v=iG0eV2bUWUM">Listen now &rarr;</a>
       </div>
 
+      <!-- 5TH PROPOSITION FEATURED CARD -->
+      <div class="card c5">
+        <span class="badge">1:1 Advice</span>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Need Direct Advice on Training Ops or Tech Stack?</h3>
+        <p>Hit a bottleneck with your <strong>training ops</strong>, evaluating your <strong>tech stack</strong>, or need <strong>professional advice</strong> on a complex question? I’m happy to hop on a call or answer directly.</p>
+        
+        <div class="card-footer-row">
+          <div class="author-meta">
+            <div class="author-avatar">JK</div>
+            <div class="author-info">
+              Jay Kinker
+              <span>Founder &amp; CEO, SimpliTrain</span>
+            </div>
+          </div>
+          <div class="signature-links">
+            <a class="sig-link linkedin" href="https://www.linkedin.com/in/jaykinker/" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              Connect on LinkedIn
+            </a>
+            <a class="sig-link book" href="https://tinyurl.com/Jay-30-mins" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Book a time &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <div class="footer-note">
     <div class="divider"></div>
-    <p>Hit a bottleneck with your <strong>training ops</strong>, evaluating your <strong>tech stack</strong>, or need <strong>professional advice</strong> on a complex question? I’m happy to hop on a call or answer directly.</p>
-    <p>Just reply here, or <a href="https://tinyurl.com/Jay-30-mins" style="color: var(--blue); font-weight: 600; text-decoration: underline;">grab a time that works for you</a>.</p>
-    <div class="signature">
-      Jay Kinker
-      <span>Founder &amp; CEO, SimpliTrain</span>
-      <div class="signature-links">
-        <a class="sig-link linkedin" href="https://www.linkedin.com/in/jaykinker/" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-          Connect on LinkedIn
-        </a>
-        <a class="sig-link book" href="https://tinyurl.com/Jay-30-mins" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Book a time
-        </a>
-      </div>
-    </div>
+    <p style="margin-bottom: 0;">Just reply directly to this email, or <a href="https://tinyurl.com/Jay-30-mins" style="color: var(--blue); font-weight: 600; text-decoration: underline;">grab a time that works for you</a>.</p>
   </div>
 
 </div>
