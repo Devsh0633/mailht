@@ -169,6 +169,39 @@
     font-weight: 700; font-size: 15px; color: var(--navy);
   }
   .signature span { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .signature-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  .sig-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .sig-link.linkedin {
+    color: #0a66c2;
+    background: #eef5fc;
+    border-color: #d0e2f7;
+  }
+  .sig-link.book {
+    color: var(--blue);
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+  .sig-link svg { flex-shrink: 0; }
 
   @media (max-width: 480px) {
     .grid { grid-template-columns: 1fr; }
@@ -236,8 +269,20 @@
   <div class="footer-note">
     <div class="divider"></div>
     <p>Hit a bottleneck with your <strong>training ops</strong>, evaluating your <strong>tech stack</strong>, or need <strong>professional advice</strong> on a complex question? I’m happy to hop on a call or answer directly.</p>
-    <p>Just reply here, or <a href="https://tinyurl.com/Jay-30-mins" style="color: var(--blue); font-weight: 600; text-decoration: underline;">grab a time that works for you</a>.</p>
-    <p class="signature">Jay Kinker<span>Founder &amp; CEO, SimpliTrain</span></p>
+    <div class="signature">
+      Jay Kinker
+      <span>Founder &amp; CEO, SimpliTrain</span>
+      <div class="signature-links">
+        <a class="sig-link linkedin" href="https://www.linkedin.com/in/jaykinker/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+        <a class="sig-link book" href="https://tinyurl.com/Jay-30-mins" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a time
+        </a>
+      </div>
+    </div>
   </div>
 
 </div>
