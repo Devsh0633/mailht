@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Free Training Toolkit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0b1440;
+    --blue: #1e3a8a;
+    --cyan: #06b6d4;
+    --amber: #f59e0b;
+    --bg: #eef1f8;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #5b6478;
+    --border: #e3e7f1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 32px 16px;
+  }
+  .email { max-width: 640px; margin: 0 auto; }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    border-radius: 20px 20px 0 0;
+    padding: 36px 40px 32px;
+    text-align: center;
+  }
+  .logo-mark { display: inline-flex; align-items: center; gap: 8px; }
+  .logo-icon {
+    width: 30px; height: 30px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--cyan), #22d3ee);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 21px; color: #ffffff; letter-spacing: -0.02em;
+  }
+  .logo-text span { color: var(--cyan); }
+
+  /* HERO */
+  .hero {
+    background: var(--card);
+    padding: 44px 40px 36px;
+    text-align: center;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+    color: var(--blue); background: #e6f0ff;
+    padding: 6px 14px; border-radius: 999px; text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 34px; font-weight: 700; line-height: 1.12;
+    letter-spacing: -0.02em; color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .hero h1 em { font-style: normal; color: var(--cyan); }
+  .hero p {
+    font-size: 16px; color: var(--muted); line-height: 1.6;
+    max-width: 440px; margin: 0 auto;
+  }
+  .hero p strong { color: var(--text); }
+
+  /* GRID */
+  .grid-wrap {
+    background: var(--card);
+    padding: 8px 32px 32px;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .card {
+    position: relative;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px 22px;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  }
+  .card.c1::before { background: var(--blue); }
+  .card.c2::before { background: var(--cyan); }
+  .card.c3::before { background: #7c3aed; }
+  .card.c4::before { background: var(--amber); }
+
+  .badge {
+    position: absolute; top: 16px; right: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
+    color: #ffffff; padding: 4px 9px; border-radius: 6px;
+    text-transform: uppercase;
+  }
+  .card.c1 .badge, .card.c2 .badge { background: var(--amber); }
+  .card.c3 .badge { background: #7c3aed; }
+  .card.c4 .badge { background: var(--blue); }
+
+  .icon-box {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+  }
+  .card.c1 .icon-box { background: #dbeafe; }
+  .card.c2 .icon-box { background: #cffafe; }
+  .card.c3 .icon-box { background: #ede9fe; }
+  .card.c4 .icon-box { background: #fef3c7; }
+  .icon-box svg { width: 22px; height: 22px; }
+  .card.c1 svg { stroke: var(--blue); }
+  .card.c2 svg { stroke: var(--cyan); }
+  .card.c3 svg { stroke: #7c3aed; }
+  .card.c4 svg { stroke: var(--amber); }
+
+  .card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px; font-weight: 700; color: var(--navy);
+    margin-bottom: 8px; padding-right: 50px; line-height: 1.3;
+  }
+  .card p {
+    font-size: 13.5px; color: var(--muted); line-height: 1.55;
+    margin-bottom: 16px; min-height: 62px;
+  }
+  .card a.cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13.5px; font-weight: 700; text-decoration: none;
+    color: var(--text);
+  }
+  .card.c1 a.cta { color: var(--blue); }
+  .card.c2 a.cta { color: #0891b2; }
+  .card.c3 a.cta { color: #7c3aed; }
+  .card.c4 a.cta { color: #b45309; }
+
+  /* FOOTER NOTE */
+  .footer-note {
+    background: var(--card);
+    padding: 30px 40px 40px;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+  }
+  .divider { height: 1px; background: var(--border); margin: 0 0 28px; }
+  .footer-note p {
+    font-size: 14.5px; color: var(--muted); line-height: 1.65;
+    max-width: 460px; margin: 0 auto 20px;
+  }
+  .signature {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 15px; color: var(--navy);
+  }
+  .signature span { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+  @media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 27px; }
+    .header, .hero, .grid-wrap, .footer-note { padding-left: 22px; padding-right: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="email">
+
+  <div class="header">
+    <div class="logo-mark">
+      <span class="logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0b1440" stroke-width="2.5"><path d="M12 2 L20 7 L20 17 L12 22 L4 17 L4 7 Z"/></svg>
+      </span>
+      <span class="logo-text">Simpli<span>Train</span></span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <span class="eyebrow">Free, right now</span>
+    <h1>Your Free Training Toolkit <em>Just Dropped</em></h1>
+    <p>Four resources. <strong>Zero cost. Zero catch.</strong> Built for people who run training. And people who sell it.</p>
+  </div>
+
+  <div class="grid-wrap">
+    <div class="grid">
+
+      <div class="card c1">
+        <span class="badge">Guide</span>
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>How to Choose a TMS, 2026 Edition</h3>
+        <p>The playbook top L&amp;D leaders use before they sign with any vendor. Straight talk, no fluff.</p>
+        <a class="cta" href="https://simplitrain.com/ebooks/how-to-choose-a-training-management-system-2026-guide/">Get the guide &rarr;</a>
+      </div>
+
+      <div class="card c2">
+        <span class="badge">No signup</span>
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Free PPT to SCORM Converter</h3>
+        <p>Drop in a PowerPoint, walk away with an LMS-ready course. Seconds, not hours.</p>
+        <a class="cta" href="https://simplitrain.com/ppt-to-scorm-converter/">Convert now &rarr;</a>
+      </div>
+
+      <div class="card c3">
+        <span class="badge">No signup</span>
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <h3>Free PDF to SCORM Converter</h3>
+        <p>Same magic, for your PDFs. Any SCORM-compliant LMS, guaranteed.</p>
+        <a class="cta" href="https://simplitrain.com/pdf-to-scorm-converter/">Convert now &rarr;</a>
+      </div>
+
+      <div class="card c4">
+        <span class="badge">Podcast</span>
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Why Certification Programs Break</h3>
+        <p>Jay sits down with independent analyst John Leh to unpack why issuing a certificate is the easy 5%, the real challenge is the lifecycle behind it.</p>
+        <a class="cta" href="https://www.youtube.com/watch?v=iG0eV2bUWUM">Listen now &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <div class="divider"></div>
+    <p>Got a question, about any of this or about anything else? Want fifteen minutes with me directly? I'm one reply away.</p>
+    <p class="signature">Jay Kinker<span>Founder &amp; CEO, SimpliTrain</span></p>
+  </div>
+
+</div>
+</body>
+</html>
